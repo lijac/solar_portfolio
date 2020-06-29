@@ -5,6 +5,8 @@ import EmailLink from './EmailLink';
 
 import model from '../../../model/model';
 
+import './index.less';
+
 class Contact extends React.Component {
     render() {
         const username = this.props.data.profile.email.username;
@@ -17,8 +19,17 @@ class Contact extends React.Component {
                     <Col xs={12}>
                         <div>You can reach me at</div>
                         <EmailLink email={email} />
+                        <div className="freelancersunion-badge">
+                            <a href="https://www.freelancersunion.org?utm_source=badge&utm_campaign=member&utm_content=member-stamp-200">
+                                <img
+                                    src="https://assets.freelancersunion.org/static/images/member-badge.ec82f86413ea.svg"
+                                    alt="Proud member of Freelancers Union"
+                                />
+                            </a>
+                        </div>
                     </Col>
                 </Row>
+                
             </Grid>
         );
     }
